@@ -1,0 +1,388 @@
+@import
+url('https://fonts.googleapis.com/css2?family=Overpass&display=swap' rel="stylesheet");
+url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+* {
+  box-sizing: border-box;
+  transition: all ease-in-out 350ms;
+}
+
+html{
+  background-image: url(../img/detail-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-size: 110%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Overpass', sans-serif;
+  text-align: center;
+
+}
+
+img {
+    max-height: 25%;
+    width: auto;
+}
+
+
+.container{
+  width: 95%;
+  max-width: auto;
+  margin: 0 auto;
+}
+
+/*typography*/
+
+h1 {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+  line-height: 1.5;
+  font-size: 1.5em;
+}
+
+p:last-of-type{
+  margin-bottom: 0;
+}
+
+.welcomedetail {
+  font-weight: 400;
+  color: #FFF;
+  font-size: 1.5rem;
+  margin-top: 1em;
+}
+.welcomedetail span {
+  font-weight: 700;
+  color: #FFF;
+  display: block;
+  font-size: 2em;
+}
+
+@media(min-width:55rem) {
+  .welcomedetail {
+    font-size: 4rem;
+  }
+}
+@media(min-width:55rem) {
+  .welcomedetail span {
+    font-size: 5rem;
+    display: block;
+  }
+}
+
+/*buttons*/
+.button {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-width: 2px;
+  border-style: solid;
+  padding: .85em 2em;
+  margin-top: .85em;
+}
+
+.button-accent {
+  color: #FFF;
+  border-color: #09B5A6;
+}
+
+.button-accent:hover,
+.button-accent:focus{
+  /*background: #7f7f7f;*/
+  color: #7f7f7f;
+  border-color: #034842;
+}
+
+/*Parallax*/
+
+.parallax--bg,
+.parallax--tb {
+  transition: initial;
+}
+
+/*header*/
+header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-top: 1em;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin: auto;
+}
+
+nav a {
+  font-weight: 400;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: .5rem;
+  /*background: blue;*/
+  color: #FFF;
+  font-size: .95em;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #7f7f7f;
+}
+
+@media (min-width: 55rem) {
+  .logo {
+    float: left;
+    margin-left: 1em;
+  }
+  nav {
+    float: right;
+  }
+
+}
+/*Home Detail*/
+.home-detail {
+  /*background-image: url(../img/detail-bg.jpg);
+  background-image: linear-gradient(purple, yellow);
+  background-position: center;
+  background-size: cover;
+  max-height: 100%;
+  width: auto;
+  color: #FFF;*/
+
+}
+
+@media (min-width: 55rem) {
+  .home-detail{
+    max-height: 100%;
+    width: auto;
+    padding-top:35vh;
+  }
+}
+
+/*Home About*/
+.home-about-textbox {
+  background-color: #232323;
+  padding: 3em;
+  width: 100vw;
+  margin-left: -2.7%;
+  outline: 2px solid #09B5A6;
+  outline-offset: -1.5em;
+  color: #fff;
+  position: relative;
+  font-size: 1em;
+}
+
+.home-about-textbox h1 {
+  color: #09B5A6;
+  position: absolute;
+  background: #232323;
+  left: 10%;
+  top: .2em;
+  padding: 0 .325em;
+}
+
+@media (min-width: 60rem) {
+  h1 {
+    font-size: 2rem;
+  }
+@media (min-width: 60rem) {
+    .home-about-textbox h1 {
+      left: 20%;
+    }
+  }
+
+.home-about {
+  padding: 10em;
+}
+
+.home-about-textbox {
+  width: 40%;
+  margin-left:-2.5%;
+  text-align: left;
+  top: 50em;
+  border-radius: 7px;
+  box-shadow: 0 0 5em 0 rgba(0,0,0, 3);
+}
+
+
+.home-about-textbox h1 {
+    left: 1.5em;
+    transform: translateX(0);
+  }
+}
+
+/*portfolio Detail*/
+
+.portfolio{
+  padding-top: 25em;
+}
+
+.port-slot{
+  position: relative;
+  border-radius: 7px;
+  margin: 0;
+  overflow: hidden;
+  width: 25%;
+  float: left;
+}
+
+.port_slot img{
+  display: block;
+}
+
+.proj-title{
+  position: absolute;
+  z-index: 1;
+  bottom: 3em;
+  left: 0em;
+  right: 0em;
+  color: #FFF;
+  background: rgba(0, 0, 0, 0.75);
+  max-width: 100%;
+}
+
+.proj-title {
+  transform: translatex(1500%);
+}
+
+.port-slot:hover .proj-title {
+  transform: translateY(0%);
+}
+
+/* The modal */
+.myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    height: 48vh;
+    max-height: 25%;
+    width: 25vw;
+    object-fit: cover;
+}
+
+.myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    height:80%;
+    max-height: 80vh;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+    margin: auto;
+    display: block;
+    height:80%;
+    max-height: 80vh;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 80%){
+    .modal-content {
+        width: 100%;
+    }
+}
+/*Footer*/
+
+.social-footer {
+  position: fixed;
+  width: 100%;
+  height:50px;
+  left: 0;
+  bottom: 0;
+  padding-bottom: 0.5em;
+  text-align: right;
+}
+.social-footer .social-right {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+}
+
+.social-footer .icon-list {
+}
+
+.social-footer .icon-list a{
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color: #232323;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #FFF;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 0px;
+}
+
+}
