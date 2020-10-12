@@ -1,3 +1,3 @@
-# thebrushwarrior.github.io
+# joehall20.github.io
 
 Custom Portfolio website
