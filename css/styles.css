@@ -83,10 +83,12 @@ p:last-of-type{
   font-weight: 700;
   text-decoration: none;
   text-transform: uppercase;
-  border-width: 2px;
+  border-width: 3px;
   border-style: solid;
-  padding: .85em 2em;
-  margin-top: .85em;
+  border-radius: 7px;
+  padding: .85em 3em;
+  margin-top: 1em;
+  background-color: black;
 }
 
 .button-accent {
@@ -217,7 +219,6 @@ nav a:focus {
   box-shadow: 0 0 5em 0 rgba(0,0,0, 3);
 }
 
-
 .home-about-textbox h1 {
     left: 1.5em;
     transform: translateX(0);
@@ -225,7 +226,6 @@ nav a:focus {
 }
 
 /*portfolio Detail*/
-
 .portfolio{
   padding-top: 25em;
 }
@@ -352,8 +352,8 @@ nav a:focus {
         width: 100%;
     }
 }
-/*Footer*/
 
+/*Footer*/
 .social-footer {
   position: fixed;
   width: 100%;
